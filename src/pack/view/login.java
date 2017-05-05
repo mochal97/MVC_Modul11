@@ -172,7 +172,7 @@ public class login extends javax.swing.JFrame {
             ps.setString(2, txtpass.getText());             
             ResultSet result =ps.executeQuery();             
             if(result.next()){                 
-                new home().show();                 
+                new home(user).show();                 
                 user = txtnama.getText();//perlu deklarasi user diclass utama.                 
                 this.dispose(); 
             }             else{ 

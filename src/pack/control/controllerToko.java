@@ -73,13 +73,13 @@ public class controllerToko {
     public void isiField(int row){     
         hm.getTxtKode().setText(lt.get(row).getkode().toString());     
         hm.getTxtNama().setText(lt.get(row).getnama().toString());
-        hm.getCbKategori().setSelectedItem(lt.get(row).getkategori().toStrin g());     
+        hm.getCbKategori().setSelectedItem(lt.get(row).getkategori().toString());     
         hm.getCbJenis().setSelectedItem(lt.get(row).getjenis().toString());     
         hm.getTxtHarga().setText(lt.get(row).getharga().toString());
     }     
     public void CariKategori(){         
         if(hm.getCbCariKategori().getSelectedItem().toString().isEmpty()){
-            impToko.getCariKategori((String)hm.getCbCariKategori().getSelectedIt em());             
+            impToko.getCariKategori((String)hm.getCbCariKategori().getSelectedItem());             
             isiTableCariKategori(); 
         }else{ 
             JOptionPane.showMessageDialog(hm, 	"Silahkan Pilih Kategori"); 
